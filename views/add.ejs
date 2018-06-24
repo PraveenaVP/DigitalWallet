@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- For date picker -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $(document).ready(function () {
+
+    //Setting the date picker
+    $( "#datepicker" ).datepicker(
+        { changeYear: true,
+            changeMonth: true,
+            autoSize: true,
+            beforeShow: function(){
+                $(".ui-datepicker").css('font-size', 3)
+            }}
+
+    );
+
+//User enter only numbers in card number and cvv
+    $("#cardnumber").keydown(function(e)
+    {
+        if (e.shiftKey)
+            e.preventDefault();
+        else
+        {
+            var nKeyCode = e.keyCode;
+            //Ignore Backspace and Tab keys
+            if (nKeyCode == 8 || nKeyCode == 9)
+                return;
+            if (nKeyCode < 95)
+            {
+                if (nKeyCode < 48 || nKeyCode > 57)
+                    e.preventDefault();
+            }
+            else
+            {
+                if (nKeyCode < 96 || nKeyCode > 105)
+                    e.preventDefault();
+            }
+        }
+    });
+
+    $("#cvv").keydown(function(e)
+    {
+        if (e.shiftKey)
+            e.preventDefault();
+        else
+        {
+            var nKeyCode = e.keyCode;
+            //Ignore Backspace and Tab keys
+            if (nKeyCode == 8 || nKeyCode == 9)
+                return;
+            if (nKeyCode < 95)
+            {
+                if (nKeyCode < 48 || nKeyCode > 57)
+                    e.preventDefault();
+            }
+            else
+            {
+                if (nKeyCode < 96 || nKeyCode > 105)
+                    e.preventDefault();
+            }
+        }
+    });
+
+
+//Save button click
+    $("#btnSubmit").click(function(){
+
+        //Entered button click
+        console.log("Save button clicked");
+
+
+//Retrieve the data
+        var cardname = document.getElementById("cardname").value;
+        var cardnumber = document.getElementById("cardnumber").value;
+        var carddate = $('#datepicker').datepicker({ dateFormat: 'yy-mm-dd' }).val();
+        var cvv = document.getElementById("cvv").value;
+
+        var query = {"carname":String(cardname),"cardnumber":String(cardnumber),"carddate":String(carddate),"cvv":String(cvv)};
+
+// * Create request to be sent to server
+        var req = new XMLHttpRequest();
+
+        //req.addEventListener("progress", updateProgress);
+        //req.addEventListener("timeout", timeoutOccured);
+        //req.addEventListener("error", transferFailed);
+        //req.addEventListener("abort", transferCanceled);
+        //req.addEventListener("loadend", loadEnd);
+
+        console.log("Reached the req open " + query);
+
+//Set the request URL
+        req.open("GET", "http://localhost:3000/add/save?params="+JSON.stringify(query), true);
+// * Send the server request
+        req.send(null);
+
+        req.responseType = 'text';
+
+        req.onreadystatechange = function() {
+
+            if (req.status === 200 && req.readyState == 4) {
+                var serverstatus = document.getElementById("serverstatus");
+                console.log("response " +req.responseText);
+                if(req.responseText === "1")
+                {
+                    serverstatus.innerHTML = "Card details saved." ;
+                    $('#cardname').val('');
+                    $('#cardnumber').val('');
+                    $('#datepicker').val('');
+                    $('#cvv').val('');
+                }
+                else
+                {
+                    serverstatus.innerHTML = "Unable to save the card details, please try again." ;
+                }
+            }
+
+        }
+
+
+
+
+    }); //btnSubmit
+
+
+    });
+    </script>
+</head>
+<body>
+<% include pages/nav.ejs%>
+<p>Enter Card Details</p>
+
+<div class="container">
+    <fieldset>
+        <table style="width:100%">
+            <tr style="width:100%">
+                <input name="cardname" id="cardname"   type="text" class="ghost-input" placeholder="Card Name" required>
+            </tr>
+            <tr>
+                <input name="cardnumber" id="cardnumber"   class="ghost-input" placeholder="Card Number" required>
+            </tr>
+            <tr>
+                <!-- <input name="carddate" id ="carddate"  type="number" class="ghost-input" placeholder="Expiry Date" required> -->
+                <p>Date: <input type="text" id="datepicker"></p>
+            </tr>
+            <tr>
+                <input name="cvv" id="cvv"  class="ghost-input" placeholder="CVV" required>
+            </tr>
+            <tr>
+                <!-- <input type="submit" class="ghost-button" value="Save"> -->
+                <button id="btnSubmit">Save</button>
+            </tr>
+            <table>
+            <p id="serverstatus"></p>
+    </fieldset>
+</div>
+
+</body>
+</html>
