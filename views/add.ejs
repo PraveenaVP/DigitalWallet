@@ -82,6 +82,19 @@
         var carddate = $('#datepicker').datepicker({ dateFormat: 'yy-mm-dd' }).val();
         var cvv = document.getElementById("cvv").value;
 
+        if(cardname.trim() == "" || cardname.trim() == "" || carddate.trim() == "" || cvv.trim() == "")
+        {
+            alert("Please fill out all the details");
+            return false;
+        }
+
+        if(cardnumber.length < 16)
+        {
+            alert("Please enter a valid 16 digit card number");
+            $('#cardnumber').val('');
+            return false;
+        }
+
         var query = {"carname":String(cardname),"cardnumber":String(cardnumber),"carddate":String(carddate),"cvv":String(cvv)};
 
 // * Create request to be sent to server
@@ -133,31 +146,51 @@
     </script>
 </head>
 <body>
+<h1><%= title %></h1>
+
 <% include pages/nav.ejs%>
 <p>Enter Card Details</p>
 
 <div class="container">
-    <fieldset>
-        <table style="width:100%">
-            <tr style="width:100%">
-                <input name="cardname" id="cardname"   type="text" class="ghost-input" placeholder="Card Name" required>
+    <fieldset style="height: 80%;">
+        <table style="width:100%;height: 80%;">
+            <tr>
+                <td style="width: 20%">
+                    <p> Card Name :</p>
+                </td>
+                <td >
+                    <input name="cardname" id="cardname"   type="text"  placeholder="Card Name" required>
+                </td>
+            </tr>
+               <td>
+               <p>Card Number :</p>
+               </td>
+            <td>
+                <input name="cardnumber" id="cardnumber" maxlength="16"  placeholder="Card Number" required>
+            </td>
+                   </tr>
+            <tr>
+                <td><p>Expiry Date: </p></td>
+                <td>
+                    <input type="text" id="datepicker" readonly="readonly">
+                </td>
             </tr>
             <tr>
-                <input name="cardnumber" id="cardnumber"   class="ghost-input" placeholder="Card Number" required>
+                <td><p>CVV :</p></td>
+                <td><input name="cvv" id="cvv" maxlength="4"   placeholder="CVV" required>
+                </td>
+
+
             </tr>
             <tr>
-                <!-- <input name="carddate" id ="carddate"  type="number" class="ghost-input" placeholder="Expiry Date" required> -->
-                <p>Date: <input type="text" id="datepicker"></p>
+               <td><button id="btnSubmit">Save</button>
+               </td>
+                <td>
+                    <p id="serverstatus"></p>
+                </td>
             </tr>
-            <tr>
-                <input name="cvv" id="cvv"  class="ghost-input" placeholder="CVV" required>
-            </tr>
-            <tr>
-                <!-- <input type="submit" class="ghost-button" value="Save"> -->
-                <button id="btnSubmit">Save</button>
-            </tr>
-            <table>
-            <p id="serverstatus"></p>
+            </table>
+
     </fieldset>
 </div>
 

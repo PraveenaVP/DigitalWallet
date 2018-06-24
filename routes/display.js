@@ -16,10 +16,10 @@ router.get('/', function(req, res, next) {
             console.log("result " + result.length);
             for(i = 0;i < result.length;i++)
             {
-                value = {"cardname" : result[i]["cardname"],
-                         "cardnumber" : result[i]["cardnumber"],
-                         "expirydate" : result[i]["expirydate"],
-                          "cvv" : result[i]["cvv"]
+                value = {"Cardname" : result[i]["cardname"],
+                         "Cardnumber" : result[i]["cardnumber"],
+                         "Expirydate" : result[i]["expirydate"],
+                          "CVV" : result[i]["cvv"]
             };
                 arrdata.push(value);
 

@@ -21,62 +21,20 @@
 
                 $("#grid").jsGrid({
                     width: "100%",
-                    height: "400px",
-                    filtering: true,
+                    height: "200px",
+                    filtering: false,
                     editing: true,
                     sorting: true,
                     paging: true,
                     data: display_data,
                     fields: [
-                        { name: "cardname", type: "text", width: 100 },
-                        { name: "cardnumber", type: "number", width: 50 },
-                        { name: "expirydate", type: "text", width: 100 },
-                        { name: "cvv", type: "number", width: 50 }
+                        { name: "Cardname", type: "text",align:"left", width: 100 },
+                        { name: "Cardnumber", type: "number",align:"left", width: 50 },
+                        { name: "Expirydate", type: "text", align:"left",width: 100 },
+                        { name: "CVV", type: "number",align:"left", width: 50 }
                     ]
                 })
             })
-
-            // var friends = [
-            //     {
-            //         Name: "Ada Lovelace",
-            //         Age: 36,
-            //         Country: 3,
-            //         Cool: true,
-            //     },
-            //     {
-            //         Name: "Grace Hopper",
-            //         Age: 85,
-            //         Country: 1,
-            //         Cool: true,
-            //     },
-            //     {
-            //         Name: "Alan Turing",
-            //         Age: 41,
-            //         Country: 3,
-            //         Cool: true,
-            //     },
-            //     {
-            //         Name: "Miguel Alcubierre",
-            //         Age: 53,
-            //         Country: 5,
-            //         Cool: true,
-            //     }
-            // ];
-            //
-            // var countries = {
-            //     name: "Country",
-            //     type: "select",
-            //     items: [
-            //         { Name: "", Id: 0 },
-            //         { Name: "United States", Id: 1 },
-            //         { Name: "France", Id: 2 },
-            //         { Name: "United Kingdom", Id: 3 },
-            //         { Name: "Spain", Id: 4 },
-            //         { Name: "Mexico", Id: 5 }
-            //     ],
-            //     valueField: "Id",
-            //     textField: "Name"
-            // }
 
             function hideAllDivContents() {
                 $('.contents').hide();
@@ -89,6 +47,7 @@
     </script>
 </head>
 <body>
+<h1><%= title %></h1>
 <% include pages/nav.ejs%>
 <p>Display Card Details</p>
 <div id="grid"></div>
