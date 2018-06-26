@@ -23,6 +23,7 @@
       Chai
       
 ## Packages
+     The following packages must be installed.
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
     "cookie-parser": "~1.4.3",
