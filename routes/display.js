@@ -24,11 +24,14 @@ router.get('/', function(req, res, next) {
                 arrdata.push(value);
 
             }
-
-            res.render('display', { title: 'Digital Wallet', data:arrdata});
+          res.render('display', { title: 'Digital Wallet', data:arrdata});
 
         }
-    );
+    )
+    .catch(err =>{
+     console.log("Error accessing data from database " + err);
+     res.send(err);
+    });
 
 });
 

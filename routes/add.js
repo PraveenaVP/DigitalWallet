@@ -47,34 +47,49 @@ router.get('/save', function(req, res, next) {
                 if (err) {
                     console.log(err.message);
                     dbSuccess = false;
+                    res.send("0")
                 }
                 else{
                     // get the last insert id
                     console.log(`A row has been inserted with rowid ${this.lastID}`);
-                    dbSuccess = true;
+                    //dbSuccess = true;
+                    //close the database
+                    db.close(function(err,data){
+                        if(err){
+                            console.log(" Error while closing the database "+err);
+                            res.send("0")
+                        }
+                        else{
+                            console.log(" Database successfully closed "+ data);
+                            res.send("1")
+                        }
+
+                    });
+
+
                 }
 
             });
 
         });
 
-        //close the database
-        db.close(function(err,data){
-            if(err){
-                console.log(" Error while closing the database "+err);
-            }
-            else{
-                console.log(" Database successfully closed "+ data);
-            }
-
-        });
-
-        if(dbSuccess){
-            res.send("1");
-        }
-        else{
-            res.send("0");
-        }
+        // //close the database
+        // db.close(function(err,data){
+        //     if(err){
+        //         console.log(" Error while closing the database "+err);
+        //     }
+        //     else{
+        //         console.log(" Database successfully closed "+ data);
+        //     }
+        //
+        // });
+        //
+        // if(dbSuccess){
+        //     res.send("1");
+        // }
+        // else{
+        //     res.send("0");
+        // }
 
 
 
