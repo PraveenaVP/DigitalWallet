@@ -17,4 +17,18 @@
 ## Testing
       Mocha
       Chai
+      
+## Packages
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jquery": "^3.3.1",
+    "mocha": "^5.2.0",
+    "morgan": "~1.9.0",
+    "sqlite3": "^4.0.1"
+    "jscomplex": "^1.1.0"
    
