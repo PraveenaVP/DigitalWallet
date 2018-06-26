@@ -31,4 +31,10 @@
     "morgan": "~1.9.0",
     "sqlite3": "^4.0.1"
     "jscomplex": "^1.1.0"
+ 
+## Development OS Platform
+      Description:	Ubuntu 16.04.4 LTS
+      Release:	16.04
+      Codename:	xenial
+
    
