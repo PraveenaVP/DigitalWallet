@@ -8,7 +8,11 @@
 
 
 ## Database.
-      SQLite
+      SQLite.
+      To create the table.
+            1. Open sqlite. 
+            2. Type .read /DigitalWallet/Database/dbSchema.sql ;
+            3. Press Enter.
     
 ## Complexity Analysis Report
       DigitalWallet/complexity/Analysis Report.pdf
