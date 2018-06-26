@@ -44,7 +44,7 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
-      <p class="stat">69.67</p>
+      <p class="stat">70.66</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
@@ -62,11 +62,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
-      <p class="stat">16.77</p>
+      <p class="stat">16.13</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
-      <p class="stat">0.49</p>
+      <p class="stat">0.47</p>
     </div>
   </div>
 </div>
@@ -105,21 +105,21 @@ router.get(&#039;/save&#039;, function(req, res, next) {
     let dbSuccess = new Boolean(false);
 
     //Retrieve the user input values
-    if(req.query.params != null)
+    if(req.query.params !== null)
     {
         var id = JSON.parse(req.query.params);
         var query = [];
         for(var myKey in id) {
             query.push(id[myKey]);
-            console.log(id[myKey]);
+            //console.log(id[myKey]);
         }
 
 
-        var insertQuery = &#039;INSERT INTO CardDetails(cardname,cardnumber,expirydate,cvv) VALUES(?,?,?,?)&#039;
+        var insertQuery = &#039;INSERT INTO CardDetails(cardname,cardnumber,expirydate,cvv) VALUES(?,?,?,?)&#039;;
         //Create Database Instance
         var sqlite3 = require(&#039;sqlite3&#039;).verbose();
 
-        console.log(&quot;Created sqlite3 instance&quot;)
+        //console.log(&quot;Created sqlite3 instance&quot;);
 
         var db = new sqlite3.Database(databasepath, (err) =&gt; {
             if (err) {
@@ -138,7 +138,7 @@ router.get(&#039;/save&#039;, function(req, res, next) {
                 if (err) {
                     console.log(err.message);
                     dbSuccess = false;
-                    res.send(&quot;0&quot;)
+                    res.send(&quot;0&quot;);
                 }
                 else{
                     // get the last insert id
@@ -148,11 +148,11 @@ router.get(&#039;/save&#039;, function(req, res, next) {
                     db.close(function(err,data){
                         if(err){
                             console.log(&quot; Error while closing the database &quot;+err);
-                            res.send(&quot;0&quot;)
+                            res.send(&quot;0&quot;);
                         }
                         else{
                             console.log(&quot; Database successfully closed &quot;+ data);
-                            res.send(&quot;1&quot;)
+                            res.send(&quot;1&quot;);
                         }
 
                     });

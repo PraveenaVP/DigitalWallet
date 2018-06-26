@@ -82,7 +82,7 @@
         var carddate = $('#datepicker').datepicker({ dateFormat: 'yy-mm-dd' }).val();
         var cvv = document.getElementById("cvv").value;
 
-        if(cardname.trim() == "" || cardname.trim() == "" || carddate.trim() == "" || cvv.trim() == "")
+        if(cardname.trim() === "" || cardname.trim() === "" || carddate.trim() === "" || cvv.trim() === "")
         {
             alert("Please fill out all the details");
             return false;
@@ -134,7 +134,7 @@
                 }
             }
 
-        }
+        };
 
 
 

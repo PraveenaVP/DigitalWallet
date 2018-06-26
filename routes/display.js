@@ -10,13 +10,13 @@ router.get('/', function(req, res, next) {
 
     var values = getData();
 
-    arrdata = [];
+    var arrdata = [];
     values.then(function(result)
         {
             console.log("result " + result.length);
-            for(i = 0;i < result.length;i++)
+            for(var i = 0;i < result.length;i++)
             {
-                value = {"Cardname" : result[i]["cardname"],
+               var value = {"Cardname" : result[i]["cardname"],
                          "Cardnumber" : result[i]["cardnumber"],
                          "Expirydate" : result[i]["expirydate"],
                           "CVV" : result[i]["cvv"]
@@ -51,7 +51,7 @@ function getData()
     });
 
 
-    dict = [];
+    var dict = [];
     return new Promise(function(resolve,reject)
     {
         //Run the insert statement
@@ -59,13 +59,13 @@ function getData()
             db.all("Select * from CardDetails", function(err,rows) {
                 if (err) {
                     console.log(err.message);
-                    dbSuccess = false;
+                    //dbSuccess = false;
                 }
                 else{
                     // get the last insert id
                     rows.forEach(function (row) {
 
-                        value = {
+                       var value = {
                         "cardname" : row.cardname,
                         "cardnumber" : row.cardnumber,
                         "expirydate" : row.expirydate,

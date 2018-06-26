@@ -14,21 +14,21 @@ router.get('/save', function(req, res, next) {
     let dbSuccess = new Boolean(false);
 
     //Retrieve the user input values
-    if(req.query.params != null)
+    if(req.query.params !== null)
     {
         var id = JSON.parse(req.query.params);
         var query = [];
         for(var myKey in id) {
             query.push(id[myKey]);
-            console.log(id[myKey]);
+            //console.log(id[myKey]);
         }
 
 
-        var insertQuery = 'INSERT INTO CardDetails(cardname,cardnumber,expirydate,cvv) VALUES(?,?,?,?)'
+        var insertQuery = 'INSERT INTO CardDetails(cardname,cardnumber,expirydate,cvv) VALUES(?,?,?,?)';
         //Create Database Instance
         var sqlite3 = require('sqlite3').verbose();
 
-        console.log("Created sqlite3 instance")
+        //console.log("Created sqlite3 instance");
 
         var db = new sqlite3.Database(databasepath, (err) => {
             if (err) {
@@ -47,7 +47,7 @@ router.get('/save', function(req, res, next) {
                 if (err) {
                     console.log(err.message);
                     dbSuccess = false;
-                    res.send("0")
+                    res.send("0");
                 }
                 else{
                     // get the last insert id
@@ -57,11 +57,11 @@ router.get('/save', function(req, res, next) {
                     db.close(function(err,data){
                         if(err){
                             console.log(" Error while closing the database "+err);
-                            res.send("0")
+                            res.send("0");
                         }
                         else{
                             console.log(" Database successfully closed "+ data);
-                            res.send("1")
+                            res.send("1");
                         }
 
                     });

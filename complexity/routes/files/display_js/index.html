@@ -44,7 +44,7 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
-      <p class="stat">73.77</p>
+      <p class="stat">73.59</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
@@ -62,7 +62,7 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
-      <p class="stat">17.35</p>
+      <p class="stat">17.61</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
@@ -101,13 +101,13 @@ router.get(&#039;/&#039;, function(req, res, next) {
 
     var values = getData();
 
-    arrdata = [];
+    var arrdata = [];
     values.then(function(result)
         {
             console.log(&quot;result &quot; + result.length);
-            for(i = 0;i &lt; result.length;i++)
+            for(var i = 0;i &lt; result.length;i++)
             {
-                value = {&quot;Cardname&quot; : result[i][&quot;cardname&quot;],
+               var value = {&quot;Cardname&quot; : result[i][&quot;cardname&quot;],
                          &quot;Cardnumber&quot; : result[i][&quot;cardnumber&quot;],
                          &quot;Expirydate&quot; : result[i][&quot;expirydate&quot;],
                           &quot;CVV&quot; : result[i][&quot;cvv&quot;]
@@ -142,7 +142,7 @@ function getData()
     });
 
 
-    dict = [];
+    var dict = [];
     return new Promise(function(resolve,reject)
     {
         //Run the insert statement
@@ -150,13 +150,13 @@ function getData()
             db.all(&quot;Select * from CardDetails&quot;, function(err,rows) {
                 if (err) {
                     console.log(err.message);
-                    dbSuccess = false;
+                    //dbSuccess = false;
                 }
                 else{
                     // get the last insert id
                     rows.forEach(function (row) {
 
-                        value = {
+                       var value = {
                         &quot;cardname&quot; : row.cardname,
                         &quot;cardnumber&quot; : row.cardnumber,
                         &quot;expirydate&quot; : row.expirydate,
