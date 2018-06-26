@@ -10,8 +10,8 @@
 ## Database.
       SQLite.
       To create the table.
-            1. Open sqlite. 
-            2. Type .read /DigitalWallet/Database/dbSchema.sql ;
+            1. $ sqlite3 digitalwallet.db 
+            2. $ .read /DigitalWallet/Database/dbSchema.sql ;
             3. Press Enter.
     
 ## Complexity Analysis Report
