@@ -16,7 +16,7 @@
             changeMonth: true,
             autoSize: true,
             beforeShow: function(){
-                $(".ui-datepicker").css('font-size', 3)
+                $(".ui-datepicker").css('font-size', 5)
             }}
 
     );
@@ -111,6 +111,7 @@
         var port = <%- JSON.stringify(port) %>
         console.log("port in add ejs " + port);
 //Set the request URL
+        if(port?port:3000);
        // req.open("GET", "http://localhost:3000/add/save?params="+JSON.stringify(query), true);
         req.open("GET", "http://localhost:"+port+"/add/save?params="+JSON.stringify(query), true);
 
