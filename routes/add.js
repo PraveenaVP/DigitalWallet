@@ -1,11 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
+
 var databasepath = "Database/digitalwallet.db";
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.render('add', { title: 'Digital Wallet' });
+    var port = req.connection.localPort;
+    res.render('add', { title: 'Digital Wallet', port:port });
 });
 
 router.get('/save', function(req, res, next) {

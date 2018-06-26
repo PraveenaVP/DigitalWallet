@@ -108,8 +108,12 @@
 
         console.log("Reached the req open " + query);
 
+        var port = <%- JSON.stringify(port) %>
+        console.log("port in add ejs " + port);
 //Set the request URL
-        req.open("GET", "http://localhost:3000/add/save?params="+JSON.stringify(query), true);
+       // req.open("GET", "http://localhost:3000/add/save?params="+JSON.stringify(query), true);
+        req.open("GET", "http://localhost:"+port+"/add/save?params="+JSON.stringify(query), true);
+
 // * Send the server request
         req.send(null);
 
