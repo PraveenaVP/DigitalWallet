@@ -4,7 +4,8 @@
 ## Front End development.
       Node.js	
       Express	
-      EJS	
+      EJS
+      CSS3
 
 
 ## Database.
