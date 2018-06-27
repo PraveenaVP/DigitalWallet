@@ -42,6 +42,9 @@
       Description:	Ubuntu 16.04.4 LTS
       Release:	16.04
       Codename:	xenial
+     
+## Development IDE
+      WebStorm
       
 ## #TODO
       Use SQLCIPHER for encrypted database
