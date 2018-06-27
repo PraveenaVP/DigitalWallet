@@ -2,7 +2,7 @@
 
 
 ## Front End development.
-      Node.js (node -v10.1.0 	& npm -v6.1.0)
+      Node.js (node -v10.1.0 & npm -v6.1.0)
       Express	
       EJS
       CSS3
