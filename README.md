@@ -2,14 +2,14 @@
 
 
 ## Front End development.
-      Node.js	
+      Node.js (node -v10.1.0 	& npm -v6.1.0)
       Express	
       EJS
       CSS3
 
 
 ## Database.
-      SQLite.
+      SQLite3.
       To create the table.
             1. $ sqlite3 digitalwallet.db 
             2. $ .read /DigitalWallet/Database/dbSchema.sql ;
