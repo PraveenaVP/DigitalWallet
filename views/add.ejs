@@ -16,7 +16,7 @@
             changeMonth: true,
             autoSize: true,
             beforeShow: function(){
-                $(".ui-datepicker").css('font-size', 5)
+                $(".ui-datepicker").css('font-size',10)
             }}
 
     );
@@ -73,7 +73,7 @@
     $("#btnSubmit").click(function(){
 
         //Entered button click
-        console.log("Save button clicked");
+        //console.log("Save button clicked");
 
 
 //Retrieve the data
@@ -106,16 +106,16 @@
         //req.addEventListener("abort", transferCanceled);
         //req.addEventListener("loadend", loadEnd);
 
-        console.log("Reached the req open " + query);
+        //console.log("Reached the req open " + query);
 
         var port = <%- JSON.stringify(port) %>
-        console.log("port in add ejs " + port);
+        //console.log("port in add ejs " + port);
 //Set the request URL
         if(port?port:3000);
        // req.open("GET", "http://localhost:3000/add/save?params="+JSON.stringify(query), true);
         req.open("GET", "http://localhost:"+port+"/add/save?params="+JSON.stringify(query), true);
 
-        console.log("http://localhost:"+port+"/add/save?params="+JSON.stringify(query));
+        //console.log("http://localhost:"+port+"/add/save?params="+JSON.stringify(query));
 // * Send the server request
         req.send(null);
 
@@ -125,7 +125,7 @@
 
             if (req.status === 200 && req.readyState == 4) {
                 var serverstatus = document.getElementById("serverstatus");
-                console.log("response " +req.responseText);
+                //console.log("response " +req.responseText);
                 if(req.responseText === "1")
                 {
                     serverstatus.innerHTML = "Card details saved." ;
@@ -139,6 +139,8 @@
                     serverstatus.innerHTML = "Unable to save the card details, please try again." ;
                 }
             }
+
+            setTimeout(()=>{window.location.reload(false);}, 1000);
 
         };
 

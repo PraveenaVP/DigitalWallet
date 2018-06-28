@@ -1,11 +1,11 @@
 body {
   padding: 20px;
-  font: 2vh "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 3vh "Lucida Grande", Helvetica, Arial, sans-serif;
   border-style: solid;
   border-color: lightskyblue;
   margin: 5px;
-  padding-bottom: 100px;
-  height: 70vh;
+  padding-bottom: 12vh;
+  height: 80vh;
 
 }
 
@@ -28,5 +28,5 @@ ui-datepicker {
 
 button, input
 {
-  font: 2vh "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 3vh "Lucida Grande", Helvetica, Arial, sans-serif;
 }
