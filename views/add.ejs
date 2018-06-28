@@ -95,7 +95,7 @@
             return false;
         }
 
-        var query = {"carname":String(cardname),"cardnumber":String(cardnumber),"carddate":String(carddate),"cvv":String(cvv)};
+        var query = {"cardname":String(cardname),"cardnumber":String(cardnumber),"carddate":String(carddate),"cvv":String(cvv)};
 
 // * Create request to be sent to server
         var req = new XMLHttpRequest();
@@ -115,6 +115,7 @@
        // req.open("GET", "http://localhost:3000/add/save?params="+JSON.stringify(query), true);
         req.open("GET", "http://localhost:"+port+"/add/save?params="+JSON.stringify(query), true);
 
+        console.log("http://localhost:"+port+"/add/save?params="+JSON.stringify(query));
 // * Send the server request
         req.send(null);
 
