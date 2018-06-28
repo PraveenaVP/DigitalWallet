@@ -3,7 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Digital Wallet' });
+  try {
+      res.render('index', {title: 'Digital Wallet'});
+  }
+  catch (err) {
+      next(err);
+  }
 });
 
 

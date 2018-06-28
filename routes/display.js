@@ -7,31 +7,35 @@ var databasepath = "Database/digitalwallet.db";
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
+    try {
 
-    var values = getData();
+        var values = getData();
 
-    var arrdata = [];
-    values.then(function(result)
-        {
-            console.log("result " + result.length);
-            for(var i = 0;i < result.length;i++)
-            {
-               var value = {"Cardname" : result[i]["cardname"],
-                         "Cardnumber" : result[i]["cardnumber"],
-                         "Expirydate" : result[i]["expirydate"],
-                          "CVV" : result[i]["cvv"]
-            };
-                arrdata.push(value);
+        var arrdata = [];
+        values.then(function (result) {
+                console.log("result " + result.length);
+                for (var i = 0; i < result.length; i++) {
+                    var value = {
+                        "Cardname": result[i]["cardname"],
+                        "Cardnumber": result[i]["cardnumber"],
+                        "Expirydate": result[i]["expirydate"],
+                        "CVV": result[i]["cvv"]
+                    };
+                    arrdata.push(value);
+
+                }
+                res.render('display', {title: 'Digital Wallet', data: arrdata});
 
             }
-          res.render('display', { title: 'Digital Wallet', data:arrdata});
-
-        }
-    )
-    .catch(err =>{
-     console.log("Error accessing data from database " + err);
-     res.send(err);
-    });
+        )
+            .catch(err => {
+                console.log("Error accessing data from database " + err);
+                res.send(err);
+            });
+    }
+    catch (err) {
+        next(err);
+    }
 
 });
 

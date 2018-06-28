@@ -2,55 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5d1505d-a5e7-4221-a59b-1086ca4db086" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/test/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Database/digitalwallet.db" beforeDir="false" afterPath="$PROJECT_DIR$/Database/digitalwallet.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/cr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/async/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/async/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/async/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/async/dist/async.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/async/dist/async.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/async/lib/async.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/async/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/.jshintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/AUTHORS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/COPYING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/component.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/src/check-types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/src/check-types.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/test/check-types.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/check-types/test/check-types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/commander/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/.complexrc.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/AUTHORS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/COPYING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/EXAMPLE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/src/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/src/formats/json.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/src/formats/markdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/src/formats/minimal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/src/formats/modules.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/src/formats/plain.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/src/formats/xml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/complexity-report/test/config-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-add.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/add.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/display.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/display.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,8 +33,13 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="49" column="48" lean-forward="true" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+            <state relative-caret-position="295">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
+              <folding>
+                <element signature="e#2248#2324#0" />
+                <element signature="e#2489#2876#0" />
+                <element signature="e#3015#3437#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,8 +65,23 @@
       <file leaf-file-name="display.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/display.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="280">
+              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+              <folding>
+                <element signature="e#274#788#0" />
+                <element signature="n#!!block;n#getData#0" />
+                <element signature="e#1069#1240#0" />
+                <element signature="e#1316#2383#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -112,8 +89,11 @@
       <file leaf-file-name="add.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/add.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="255">
+              <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
+              <folding>
+                <element signature="e#438#2653#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,8 +101,8 @@
       <file leaf-file-name="add.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/add.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="174" column="39" selection-start-line="174" selection-start-column="29" selection-end-line="174" selection-end-column="39" />
+            <state relative-caret-position="75">
+              <caret line="5" column="85" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -139,8 +119,8 @@
       <file leaf-file-name="display.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/display.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="75">
+              <caret line="5" column="82" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -172,12 +152,9 @@
       <list>
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/pages/nav.ejs" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/complexityanalysis/analysis.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/routes/display.js" />
         <option value="$PROJECT_DIR$/bin/www" />
-        <option value="$PROJECT_DIR$/routes/add.js" />
         <option value="$PROJECT_DIR$/views/display.ejs" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
@@ -185,6 +162,9 @@
         <option value="$PROJECT_DIR$/test/test-add.js" />
         <option value="$PROJECT_DIR$/test/test-dom.js" />
         <option value="$PROJECT_DIR$/test/test-dom.html" />
+        <option value="$PROJECT_DIR$/routes/add.js" />
+        <option value="$PROJECT_DIR$/routes/display.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/test/test.js" />
       </list>
     </option>
@@ -304,24 +284,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529850263434</updated>
-      <workItem from="1529850266008" duration="50247000" />
+      <workItem from="1529850266008" duration="52226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50247000" />
+    <option name="totallyTimeSpent" value="52226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19907764" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19907764" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29668674" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29668674" />
       <window_info id="npm" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
@@ -343,7 +323,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -367,31 +347,10 @@
     <entry file="file://$PROJECT_DIR$/Database/dbSchema.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/display.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -416,31 +375,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/display.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/add.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="174" column="39" selection-start-line="174" selection-start-column="29" selection-end-line="174" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -458,10 +396,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/display.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="82" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/add.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="85" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/add.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
+          <folding>
+            <element signature="e#438#2653#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/display.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="e#274#788#0" />
+            <element signature="n#!!block;n#getData#0" />
+            <element signature="e#1069#1240#0" />
+            <element signature="e#1316#2383#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="49" column="48" lean-forward="true" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+        <state relative-caret-position="295">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#2248#2324#0" />
+            <element signature="e#2489#2876#0" />
+            <element signature="e#3015#3437#0" />
+          </folding>
         </state>
       </provider>
     </entry>

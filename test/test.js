@@ -11,15 +11,12 @@ var api = "http://localhost:3000";
 
 var index = require('../routes/index');
 
-// const jsdom = require("jsdom");
-// const { JSDOM } = jsdom;
+// var jsdom = require('jsdom');
+// var document = jsdom.jsdom("");
 //
-// const dom = new JSDOM(``, {
-//     url: "http://localhost:3000/add",
-//     contentType: "text/html",
-//     includeNodeLocations: true
-// });
-
+// var window = document.defaultView;
+// global.window = window
+// global.$ = require('jquery')
 
 
 
@@ -68,7 +65,6 @@ describe('Digital Wallet test',() =>{
                 throw err;
             });
     });
-
 
 });
 
